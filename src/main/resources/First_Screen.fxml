@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+
+<AnchorPane stylesheets="@firstscreen.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs_350_assigment.FirstScreen">
+
+   <!-- Background Image -->
+   <ImageView fitHeight="1080.0" fitWidth="1440.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Image url="@com/example/cs_350_assigment/Images/gift.png" />
+   </ImageView>
+
+   <!-- Dark transparent overlay -->
+   <Region prefHeight="1080.0" prefWidth="1440.0" style="-fx-background-color: rgba(0, 0, 0, 0.6);" />
+
+   <!-- Title Label -->
+   <Label fx:id="titleLabel" layoutX="400.0" layoutY="180.0" text="✨ Bible Quiz Challenge ✨" styleClass="title-label" />
+
+   <!-- Description Label -->
+   <Label fx:id="descriptionLabel" layoutX="360.0" layoutY="270.0" prefWidth="720.0" wrapText="true" text="Test your knowledge with 15 random Bible questions. coming with a 30-second countdown!" styleClass="description-label" />
+
+   <!-- Start Button -->
+   <Button fx:id="startButton" layoutX="620.0" layoutY="400.0" prefHeight="50.0" prefWidth="200.0"
+           text="Start Quiz" styleClass="start-button"
+           onAction="#handleStartButton" />
+
+
+</AnchorPane>

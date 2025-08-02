@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@secondscreen.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs_350_assigment.SecondScreen">
+
+    <children>
+
+        <!-- Background Image -->
+        <ImageView fitHeight="706.0" fitWidth="1440.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@Images/take.png" />
+            </image>
+        </ImageView>
+
+        <!-- Overlay for readability -->
+        <Region layoutX="-10.0" prefHeight="706.0" prefWidth="1440.0" styleClass="dark-overlay" />
+
+        <!-- Quiz Title -->
+        <Label layoutX="551.0" layoutY="31.0" styleClass="title-label" text="✨ Bible Quiz ✨" />
+
+        <!-- Question Box -->
+        <AnchorPane layoutX="454.0" layoutY="175.0" prefHeight="100.0" prefWidth="500.0" styleClass="question-box">
+            <children>
+                <Label fx:id="questionLabel" layoutX="40.0" layoutY="50.0" prefWidth="460.0" styleClass="question-label" text="the question will appear here." wrapText="true" />
+            </children>
+        </AnchorPane>
+
+        <!-- Options -->
+        <VBox layoutX="549.0" layoutY="296.0" prefHeight="212.0" prefWidth="300.0" spacing="15.0" styleClass="options-box">
+            <children>
+                <Button fx:id="optionA" styleClass="option-button" text="Option A"
+                        onAction="#handleoOptionA"
+                />
+                <Button fx:id="optionB" styleClass="option-button" text="Option B"
+                        onAction="#handleoOptionB"
+                />
+                <Button fx:id="optionD" styleClass="option-button" text="Option D"
+                        onAction="#handleOptionD"
+                />
+                <Button fx:id="optionC" styleClass="option-button" text="Option C"
+                        onAction="#handleOptionC"/>
+                <Button fx:id="Show_Answer" styleClass="option-button" text="Answer"
+                        onAction="#handlAnswerButton"/>
+
+            </children>
+        </VBox>
+
+        <!-- Timer with Countdown Ring -->
+        <StackPane layoutX="210.0" layoutY="630.0" prefHeight="80.0" prefWidth="120.0" styleClass="info-box">
+            <children>
+                <ProgressIndicator fx:id="timerRing" progress="1.0" styleClass="timer-ring" />
+                <Label fx:id="timerValue" styleClass="value-label" text="00:00"
+                />
+            </children>
+        </StackPane>
+
+        <!-- Timer Label -->
+        <Label layoutX="149.0" layoutY="660.0" styleClass="info-label" text="Timer" />
+
+        <!-- Score Box -->
+        <HBox alignment="CENTER" layoutX="950.0" layoutY="650.0" spacing="10.0" styleClass="info-box">
+            <Label styleClass="info-label" text="Score:" textFill="#b28923"/>
+            <Label fx:id="scoreValue" styleClass="value-label score-label" text="0"/>
+        </HBox>
+        <!-- Submit Button -->
+        <HBox alignment="CENTER" layoutX="567.0" layoutY="644.0" prefHeight="41.0" prefWidth="132.0">
+            <Button fx:id="submitButton" mnemonicParsing="false" styleClass="submit-button" text="✅ Submit">
+                <tooltip>
+                    <Tooltip/>
+                </tooltip>
+            </Button>
+        </HBox>
+
+
+    </children>
+</AnchorPane>

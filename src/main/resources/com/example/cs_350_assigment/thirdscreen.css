@@ -1,0 +1,101 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-image: url("background.jpg"); /* Update path as needed */
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-color: rgba(0, 0, 0, 0.7); /* Dark overlay if needed */
+}
+
+/* Score Label Styling */
+.score-label {
+    -fx-font-size: 26px;
+    -fx-text-fill: #FFD700; /* gold */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, black, 3, 0.5, 0, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.score-label:hover {
+    -fx-text-fill: white;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Individual Number Styling (e.g., "10", "15") */
+.score-number {
+    -fx-font-size: 28px;
+    -fx-text-fill: #00FFAA; /* light green-blue */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, black, 3, 0.5, 0, 1);
+}
+
+.score-slash {
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Button Base */
+.action-button,
+.exit-button,
+.play-again-button {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, black, 5, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Play Again Hover + Click */
+.play-again-button:hover {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: black;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.play-again-button:pressed {
+    -fx-background-color: #0D47A1;
+    -fx-text-fill: white;
+}
+
+/* Exit Hover + Click */
+.exit-button:hover {
+    -fx-background-color: #FF5252;
+    -fx-text-fill: black;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.exit-button:pressed {
+    -fx-background-color: #B71C1C;
+    -fx-text-fill: white;
+}
+.header-label {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 4, 0.6, 1, 1);
+    -fx-alignment: center;
+}
+
+.you-got {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+    -fx-effect: dropshadow(gaussian, black, 3, 0.5, 0, 1);
+}
+.header-label {
+    -fx-font-size: 28px;
+    -fx-text-fill: #00FFD5; /* Bright Cyan */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, black, 4, 0.5, 0, 1);
+}
